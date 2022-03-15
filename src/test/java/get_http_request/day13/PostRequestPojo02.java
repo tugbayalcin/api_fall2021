@@ -11,7 +11,7 @@ import pojos.BookingResponsePojo;
 
 import static io.restassured.RestAssured.given;
 
-public class PostRequest02 extends HerOkuAppBaseUrl
+public class PostRequestPojo02 extends HerOkuAppBaseUrl
 {
     /*
  https://restful-booker.herokuapp.com/booking
