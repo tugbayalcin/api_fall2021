@@ -1,5 +1,8 @@
 package get_http_request.day15;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties (ignoreUnknown = true)
 public class Customer
 {
         /*
@@ -38,7 +41,7 @@ public class Customer
 
     private int id;
     private String firstName;
-    private String lirstName;
+    private String lastName;
     private String middleInitial;
     private String email;
     private String mobilePhoneNumber;
@@ -52,6 +55,8 @@ public class Customer
     private Country country;
     private String state;
     private User user;
+    private String accounts;
+
 
     public int getId() {
         return id;
@@ -69,12 +74,12 @@ public class Customer
         this.firstName = firstName;
     }
 
-    public String getLirstName() {
-        return lirstName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLirstName(String lirstName) {
-        this.lirstName = lirstName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getMiddleInitial() {
@@ -181,12 +186,20 @@ public class Customer
         this.user = user;
     }
 
+    public String getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(String accounts) {
+        this.accounts = accounts;
+    }
+
     public Customer() {}
 
-    public Customer(int id, String firstName, String lirstName, String middleInitial, String email, String mobilePhoneNumber, String phoneNumber, String zipCode, String address, String city, String ssn, String createDate, boolean zelleEnrolled, Country country, String state, User user) {
+    public Customer(int id, String firstName, String lastName, String middleInitial, String email, String mobilePhoneNumber, String phoneNumber, String zipCode, String address, String city, String ssn, String createDate, boolean zelleEnrolled, Country country, String state, User user, String accounts) {
         this.id = id;
         this.firstName = firstName;
-        this.lirstName = lirstName;
+        this.lastName = lastName;
         this.middleInitial = middleInitial;
         this.email = email;
         this.mobilePhoneNumber = mobilePhoneNumber;
@@ -200,6 +213,7 @@ public class Customer
         this.country = country;
         this.state = state;
         this.user = user;
+        this.accounts = accounts;
     }
 
     @Override
@@ -207,7 +221,7 @@ public class Customer
         return "Customer{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
-                ", lirstName='" + lirstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", middleInitial='" + middleInitial + '\'' +
                 ", email='" + email + '\'' +
                 ", mobilePhoneNumber='" + mobilePhoneNumber + '\'' +
@@ -221,6 +235,8 @@ public class Customer
                 ", country=" + country +
                 ", state='" + state + '\'' +
                 ", user=" + user +
+                ", accounts='" + accounts + '\'' +
                 '}';
     }
 }
+

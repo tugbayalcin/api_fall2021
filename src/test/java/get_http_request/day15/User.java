@@ -1,5 +1,8 @@
 package get_http_request.day15;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties (ignoreUnknown = true)
 public class User
 {
     /*
@@ -23,7 +26,7 @@ public class User
     private boolean activated;
     private String langKey;
     private String imageUrl;
-    private String resetData;
+    private String resetDate;
 
     public int getId() {
         return id;
@@ -89,17 +92,17 @@ public class User
         this.imageUrl = imageUrl;
     }
 
-    public String getResetData() {
-        return resetData;
+    public String getResetDate() {
+        return resetDate;
     }
 
-    public void setResetData(String resetData) {
-        this.resetData = resetData;
+    public void setResetDate(String resetDate) {
+        this.resetDate = resetDate;
     }
 
     public User() {}
 
-    public User(int id, String login, String firstName, String lastName, String email, boolean activated, String langKey, String imageUrl, String resetData) {
+    public User(int id, String login, String firstName, String lastName, String email, boolean activated, String langKey, String imageUrl, String resetDate) {
         this.id = id;
         this.login = login;
         this.firstName = firstName;
@@ -108,7 +111,7 @@ public class User
         this.activated = activated;
         this.langKey = langKey;
         this.imageUrl = imageUrl;
-        this.resetData = resetData;
+        this.resetDate = resetDate;
     }
 
     @Override
@@ -122,8 +125,7 @@ public class User
                 ", activated=" + activated +
                 ", langKey='" + langKey + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
-                ", resetData='" + resetData + '\'' +
+                ", resetDate='" + resetDate + '\'' +
                 '}';
     }
-
 }
